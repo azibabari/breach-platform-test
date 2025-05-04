@@ -6,28 +6,28 @@ class LoginPage {
 
     // Elements
     getEmailInput() {
-        return cy.get('[data-testid="email-input"]');
+        return cy.get('input[type="email"]');
     }
 
     getPasswordInput() {
-        return cy.get('[data-testid="password-input"]');
+        return cy.get('input[type="password"]');
     }
 
     getLoginButton() {
-        return cy.get('[data-testid="login-button"]');
+        return cy.contains('button', 'Continue');
     }
 
     getRegisterLink() {
-        return cy.get('[data-testid="register-link"]');
+        return cy.contains('a', 'Join');
     }
 
     // Actions
     typeEmail(email) {
-        this.getEmailInput().type(email);
+        this.getEmailInput().clear().type(email);
     }
 
     typePassword(password) {
-        this.getPasswordInput().type(password);
+        this.getPasswordInput().clear().type(password);
     }
 
     clickLogin() {
@@ -43,6 +43,14 @@ class LoginPage {
         this.typeEmail(email);
         this.typePassword(password);
         this.clickLogin();
+    }
+
+    // Verification
+    verifyLoginPage() {
+        cy.url().should('include', '/auth');
+        this.getEmailInput().should('be.visible');
+        this.getPasswordInput().should('be.visible');
+        this.getLoginButton().should('be.visible');
     }
 }
 

@@ -6,36 +6,28 @@ class RegisterPage {
 
     // Elements
     getEmailInput() {
-        return cy.get('[data-testid="email-input"]');
+        return cy.get('input[type="email"]');
     }
 
     getPasswordInput() {
-        return cy.get('[data-testid="password-input"]');
-    }
-
-    getConfirmPasswordInput() {
-        return cy.get('[data-testid="confirm-password-input"]');
+        return cy.get('input[type="password"]');
     }
 
     getRegisterButton() {
-        return cy.get('[data-testid="register-button"]');
+        return cy.contains('button', 'Continue');
     }
 
     getLoginLink() {
-        return cy.get('[data-testid="login-link"]');
+        return cy.contains('a', 'Log in');
     }
 
     // Actions
     typeEmail(email) {
-        this.getEmailInput().type(email);
+        this.getEmailInput().clear().type(email);
     }
 
     typePassword(password) {
-        this.getPasswordInput().type(password);
-    }
-
-    typeConfirmPassword(password) {
-        this.getConfirmPasswordInput().type(password);
+        this.getPasswordInput().clear().type(password);
     }
 
     clickRegister() {
@@ -50,8 +42,18 @@ class RegisterPage {
     register(email, password) {
         this.typeEmail(email);
         this.typePassword(password);
-        this.typeConfirmPassword(password);
+
+        // Wait for the button to be enabled after entering valid credentials
+        cy.contains('button', 'Continue').should('not.be.disabled');
         this.clickRegister();
+    }
+
+    // Verification
+    verifyRegistrationPage() {
+        cy.url().should('include', '/auth/register');
+        this.getEmailInput().should('be.visible');
+        this.getPasswordInput().should('be.visible');
+        this.getRegisterButton().should('be.visible');
     }
 }
 

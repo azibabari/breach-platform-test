@@ -18,7 +18,7 @@ This document summarizes the testing process for the Breach application, includi
 
 ## 2. Test Cases
 
-Detailed test cases for functional, API, WebSocket, compatibility, performance, usability, and security testing are documented in a Google Sheet: [Breach Test Cases](https://docs.google.com/spreadsheets/d/\[Insert Test Case Google Sheet ID]/edit?usp=sharing).
+Detailed test cases for functional, API, WebSocket, compatibility, performance, usability, and security testing are documented in a Google Sheet: (see below).
 
 The test cases cover:
 
@@ -37,7 +37,7 @@ Each test case includes: Test ID, Type, Scenario, Steps, Expected Result, Actual
 - **Total Tests**: 132
 - **Passed**: TBD
 - **Failed**: TBD
-- **Blocked**: TBD
+- **Blocked**: 0
 - **Bugs Found**: TBD 
 - **Test Coverage**:
   - **Functional**: All major features tested (registration, login, posts, filtering, onboarding, events).

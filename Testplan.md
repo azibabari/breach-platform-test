@@ -22,7 +22,7 @@ The test plan covers:
 - **WebSocket**: Authenticated stream at wss://breach-api-ws.qa.mvm-tech.xyz.
 - **Functionalities**:
   - User registration and login using email and password.
-  - Writing and filtering blog posts by categories.
+  - Listing and filtering blog posts by categories.
   - Onboarding with user interest selection.
   - Real-time streaming of content writeup events via WebSocket.
 
@@ -32,7 +32,7 @@ The test plan covers:
 - Ensure the UI is responsive and consistent across browsers and devices.
 - Verify API responses are correct, handle errors gracefully, and support expected payloads.
 - Confirm the WebSocket streams the events reliably, with proper authentication and reconnection logic.
-- Assess performance under load (100, 500, 1000 concurrent users).
+- Assess performance under load (100 concurrent users).
 - Identify and document all defects, prioritizing critical bugs that impact user experience.
 - Automate critical test cases for regression testing.
 - Provide clear, actionable bug reports and test recordings for developers.
@@ -60,7 +60,7 @@ The test plan covers:
 
 ### 3.3 Test Data
 
-- **Users**: Valid emails (e.g., test1@example.com), invalid emails (e.g., test@), strong/weak passwords.
+- **Users**: Valid emails (e.g., breachtest@yopmail.com), invalid emails (e.g., test@), strong/weak passwords.
 - **Posts**: Default posts from backend, filtered by categories (e.g., Featured, Popular, Recent).
 - **Interests**: Sample selections (e.g., Sports, News, Technology).
 - **WebSocket**: Authenticated tokens from login API.
@@ -71,7 +71,7 @@ The test plan covers:
 - **Compatibility Testing**: Ensure UI and functionality work across browsers (Chrome, Firefox, Safari, Edge) and devices (mobile, tablet, desktop).
 - **API Testing**: Verify request/response correctness, error handling, and payload validation.
 - **WebSocket Testing**: Confirm real-time event streaming, authentication, and reconnection behavior.
-- **Performance Testing**: Assess system stability under load (100, 500, 1000 users).
+- **Performance Testing**: Assess system stability under load (100 users).
 - **Usability Testing**: Check for intuitive navigation, clear error messages, and adherence to Figma design.
 - **Security Testing**: Basic checks for input validation (e.g., XSS, SQL injection) and authentication issues.
 
@@ -101,7 +101,7 @@ The test plan covers:
 **Event Stream**:
 - Display recent events on dashboard.
 - Verify real-time updates via WebSocket.
-- Test behavior on network interruption.
+- Test for authenticationn before streaming
 
 ### 5.2 API Testing
 
@@ -153,8 +153,7 @@ The test plan covers:
 ### 5.5 Performance Testing
 
 - Simulate load on:
-  - GET /posts: 100, 500, 1000 concurrent users.
-  - WebSocket: 100, 500, 1000 concurrent connections.
+  - GET & POST APIs:  concurrent users.
 
 - Measure response time, throughput, error rate, and system stability.
 
@@ -187,7 +186,7 @@ The test plan covers:
 
 ### 6.2 Test Case Management
 
-- Test cases are documented in documentation.md with ID, scenario, steps, expected result, actual result, and status.
+- Test cases are documented in documentation.md(Google Sheet link) with ID, scenario, steps, expected result, actual result, and status.
 - Results will be updated post-execution (Passed, Failed, Blocked).
 
 ### 6.3 Bug Tracking
@@ -195,13 +194,13 @@ The test plan covers:
 - Log bugs in a Google Sheet with:
   - Bug ID, Description, Steps to Reproduce, Severity (Critical, High, Medium, Low), Screenshots/Video, Status.
 
-- Link to Google Sheet in README.
+- Link to Google Sheet in documentation.md.
 
 ## 7. Deliverables
 
 - **Test Plan**: This document (test_plan.md).
 - **Test Documentation**: Test cases and results (documentation.md).
-- **Test Report**: Summary of findings (test_report.md).
+- **Test Report**: Summary of findings (documentation.md).
 - **Bug Tracker**: Google Sheet with bug details.
 - **Test Recordings**: Google Drive folder with videos
 

@@ -8,7 +8,7 @@
 - **WebSocket**: Real-time event streaming at wss://breach-api-ws.qa.mvm-tech.xyz.
 - **Functionalities**:
   - User registration and login using email and password.
-  - Writing and filtering blog posts by categories.
+  - Listing and filtering blog posts by categories.
   - Onboarding with user interest selection.
   - Real-time streaming of the 5 most recent events via WebSocket.
 
@@ -26,7 +26,7 @@ The test cases cover:
 - **API Testing**: Endpoints for user registration, login, posts, categories, and interests.
 - **WebSocket Testing**: Connection, event streaming, and reconnection behavior.
 - **Compatibility Testing**: UI and functionality across Chrome, Firefox, Safari, and mobile devices.
-- **Performance Testing**: Load tests for 100, 500, and 1000 concurrent users.
+- **Performance Testing**: Load tests for 100 concurrent users.
 - **Usability Testing**: Navigation, error messages, and UI consistency with Figma design.
 - **Security Testing**: Basic checks for XSS, SQL injection, and authentication issues.
 
@@ -34,38 +34,37 @@ Each test case includes: Test ID, Type, Scenario, Steps, Expected Result, Actual
 
 ## 3. Test Results
 
-- **Total Tests**: TBD (to be updated after execution)
+- **Total Tests**: 132
 - **Passed**: TBD
 - **Failed**: TBD
 - **Blocked**: TBD
-- **Bugs Found**: TBD (see Bug Tracker: [Breach Bug Tracker](https://docs.google.com/spreadsheets/d/\[Insert Bug Tracker Google Sheet ID]/edit?usp=sharing))
+- **Bugs Found**: TBD 
 - **Test Coverage**:
   - **Functional**: All major features tested (registration, login, posts, filtering, onboarding, events).
   - **API**: All endpoints tested with valid and invalid inputs.
   - **WebSocket**: Connection, streaming, and reconnection validated.
   - **Compatibility**: Tested on Chrome, Firefox, Safari (mobile and desktop).
-  - **Performance**: Load tested up to 1000 users.
+  - **Performance**: Load tested up to 100 concurrent users.
   - **Usability**: Navigation and error handling evaluated.
   - **Security**: Basic checks for XSS, SQL injection, and authentication.
 
 ## 4. Observations
 
-- **Functional**: [TBD: e.g., Most features work, but category filtering may fail on mobile.]
-- **API**: [TBD: e.g., Responses correct, but error messages need more detail.]
-- **WebSocket**: [TBD: e.g., Streams events, but reconnection delays observed.]
-- **Compatibility**: [TBD: e.g., UI responsive, but mobile dropdowns misaligned.]
-- **Performance**: [TBD: e.g., Stable at 100 users, errors at 1000 users.]
-- **Usability**: [TBD: e.g., Navigation intuitive, but error messages vague.]
-- **Security**: [TBD: e.g., Potential XSS in input fields.]
+- **Functional**: [ Most features work]
+- **API**: [ Responses correct, but some error messages need more detail.]
+- **WebSocket**: [Streams events, but delays observed. Connectwion without authorization]
+- **Compatibility**: [ UI responsive on laptops, but not very responsive on mobile]
+- **Performance**: [Errors at 100 users.]
+- **Usability**: [ Poor profile and logout experience]
+- **Security**: [Potential XSS in URL.]
 
 ## 5. Recommendations
 
-- Fix critical bugs (e.g., login failures, security vulnerabilities) before release.
-- Enhance error messages for better user guidance (e.g., specify "Incorrect password").
-- Optimize WebSocket reconnection for reliability.
-- Improve mobile responsiveness based on compatibility findings.
-- Scale backend to handle 1000+ concurrent users with minimal errors.
-- Conduct a professional security audit for comprehensive vulnerability assessment.
+- Fix security vulnerabilities before release.
+- Enhance error messages for better user guidance 
+- Websocket should only connect with authorization
+- Improve mobile responsiveness on mobile devices.
+- Scale backend to handle 100+ concurrent users with minimal errors.
 
 ## 6. References
 

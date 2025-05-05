@@ -69,17 +69,17 @@ Each test case includes: Test ID, Type, Scenario, Steps, Expected Result, Actual
 
 ## 6. References
 
-- **Test Cases**: [Breach Test Cases](https://docs.google.com/spreadsheets/d/\[Insert Test Case Google Sheet ID]/edit?usp=sharing)
-- **Bug Tracker**: [Breach Bug Tracker](https://docs.google.com/spreadsheets/d/\[Insert Bug Tracker Google Sheet ID]/edit?usp=sharing)
-- **Test Recordings**: [Google Drive Folder](https://drive.google.com/drive/folders/\[Insert Google Drive Folder ID]?usp=sharing)
-  - Exploratory: exploratory_testing_20250503.mp4
-  - Functional+Compatibility: functional_compatibility_testing_[date].mp4
-  - API+WebSocket: api_websocket_testing_[date].mp4
-  - Load: load_testing_[date].mp4
+- **Test Cases**: [Breach Test Cases]https://docs.google.com/spreadsheets/d/1wea_wAaHXueLbU4daUJkTXB7p5pZb6_ubPLrlx-uuIE/edit?usp=sharing
+- **Bug Tracker**: [Breach Bug Tracker]https://docs.google.com/spreadsheets/d/1wea_wAaHXueLbU4daUJkTXB7p5pZb6_ubPLrlx-uuIE/edit?gid=2025353782#gid=2025353782
+- **Test Recordings**: [Google Drive Folder]https://drive.google.com/drive/folders/1dgIlEPzb0RukGnH2lP_1PsOkQom4jhgF?usp=sharing
+  - Exploratory
+  - Functional+Compatibility
+  - API+WebSocket
+  - Load
 
 - **Automation Scripts**: GitHub Repository
   - Cypress: cypress/e2e/
-  - Postman: postman/breach_collection.json
+  - Postman: https://web.postman.co/workspace/0d241c8a-d8bb-479b-a70a-b00736786a2d
 
 - **Performance Tests**: JMeter files in jmeter/
 - **Test Plan**: test_plan.md

@@ -203,15 +203,11 @@ The test plan covers:
 - **Test Documentation**: Test cases and results (documentation.md).
 - **Test Report**: Summary of findings (test_report.md).
 - **Bug Tracker**: Google Sheet with bug details.
-- **Test Recordings**: Google Drive folder with videos:
-  - exploratory_testing_[date].mp4
-  - functional_compatibility_testing_[date].mp4
-  - api_websocket_testing_[date].mp4
-  - load_testing_[date].mp4
+- **Test Recordings**: Google Drive folder with videos
 
 - **Automation Scripts**:
   - Cypress scripts (cypress/e2e/).
-  - Postman collection (postman/breach_collection.json).
+  - Postman Workspace 
 
 - **Performance Tests**: JMeter test plans and results (jmeter/).
 - **GitHub Repository**: Public repository with all files and README.
